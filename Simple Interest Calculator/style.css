@@ -1,0 +1,269 @@
+html{
+    font-family:'Source Sans Pro',sans-serif;
+    font-size:16px;font-smooth:auto;
+    font-weight:300;
+    line-height:1.5;
+    color:#444;
+}
+
+h3{
+    position: fixed;
+    top: 570px;
+    left: 1080px;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #edf1f4;
+}
+.simple-interest{
+    width: 350px;
+    height: auto;
+    display: grid;
+    place-items: center;
+    background: #edf1f4;
+    box-shadow: 5px 5px 7px #ccc, -5px -5px 5px #fff;
+    border-radius: 10px;
+    text-shadow: -4px -4px 5px #fff9, 4px 4px 5px #0002;
+    padding-bottom: 40px;
+}
+
+.simple-interest div{
+    height:auto;
+    text-align: center;
+    margin-bottom: 30px;
+    width:100%;
+    box-shadow:inset 5px 5px 7px #ccc, inset -5px -5px 5px #fff;
+}
+
+.simple-interest div h2{
+    color: #3fefef;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 60px #3fefef); 
+}
+
+.simple-interest .error{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    width:70%;
+    margin:0 0 1.25rem;
+    padding:.625rem;background-color:#f8c9c4;
+    border:.125rem solid #e74c3c;
+    border-radius:.625rem;
+    color:#e74c3c;
+    font-size:.75rem;
+    font-weight:400
+}
+.simple-interest .error.hide{
+    display:none;
+}
+
+.simple-interest form label{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    width:100%;
+    margin:0 0 .625rem;
+    background:#fff;
+    border-radius: 5px;
+    box-shadow:inset 5px 5px 7px #ccc, inset -5px -5px 5px #fff;
+    
+   
+}
+.simple-interest form label>span{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    width:15%;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow:inset 5px 5px 7px #ccc, inset -5px -5px 5px #fff;
+    padding:.625rem .3125rem;
+    color:#708090;
+    font-weight:700;
+}
+.simple-interest form label input{
+    width: 200px;
+    height: 32px;
+    background: #edf1f4;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    background: transparent;
+
+}
+    
+.simple-interest form .button{
+    position:relative;
+    width:100%;
+    height:33px;
+    margin:.5rem 0 0;
+    padding:0;
+    border:none;
+    border-radius:.3125rem;
+    color:rgb(7, 7, 7);
+    font-weight: bold;
+    box-shadow:5px 5px 7px #ccc,-5px -5px 5px #fff;
+    font-size:.75rem;
+    font-weight:300;
+    text-transform:uppercase;
+    transition:.25s;
+    overflow:hidden;
+    background: #edf1f4;
+    outline: none;
+    cursor: pointer;
+}
+
+.simple-interest form .button:active{
+    box-shadow:inset 5px 5px 7px #ccc, inset -5px -5px 5px #fff;
+}
+
+
+.simple-interest form .button::before{
+    content:'Calculate';
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 16px;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center
+}
+.simple-interest form .button.loading:after,.simple-interest form .button.loading:before{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.simple-interest form .button.loading:before{
+    content:'LOADING';
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    color:#f5f5f5;
+    font-size:.75rem;
+    font-weight:700;
+    z-index:1;
+}
+.simple-interest form .button.loading:after{
+    content:'';
+    width:0%;
+    height:100%;
+    background-color:#2ecc71;
+    -webkit-animation:loading 2s ease;
+    animation:loading 2s ease;
+    z-index:0
+}
+@-webkit-keyframes loading{
+    100%{width:100%}
+}
+@keyframes loading{
+    100%{width:100%}
+}
+
+.simple-interest .results{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    width:100%;
+    margin:1.25rem 0 0;
+    padding:0;
+}
+.simple-interest .results.hide{
+    display:none;
+}
+.simple-interest .results .monthly-payment,.simple-interest .results .total-amount,.simple-interest .results .total-interest{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:justify;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    width:70%;
+    margin-bottom:.3125rem;
+}
+.simple-interest .results .monthly-payment>span,.simple-interest .results .total-amount>span,.simple-interest .results .total-interest>span{
+    position:relative;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    height:1.75rem;
+    padding:.3125rem .625rem;
+    border:.0625rem solid #3498db;
+    font-size:.75rem;
+}
+.simple-interest .results .monthly-payment>span:first-child,.simple-interest .results .total-amount>span:first-child,.simple-interest .results .total-interest>span:first-child{
+    -webkit-box-pack:start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+    width:40%;
+    margin:0;
+    background-color:#3498db;
+    color:#fff;
+}
+.simple-interest .results .monthly-payment>span:last-child,.simple-interest .results .total-amount>span:last-child,.simple-interest .results .total-interest>span:last-child{
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;
+    width:60%;
+    margin:0;
+    background-color:#fff;
+    font-weight:600;
+}

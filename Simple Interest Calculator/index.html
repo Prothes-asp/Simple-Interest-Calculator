@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <title>Simple Interest Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="simple-interest">
+        <div>
+            <h2>Simple Interest Calculator</h2>
+        </div>
+        <form id="calculate">
+            <label for="principal" class="principal">
+                <span>
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                </span>
+                <input id="principal" type="number" placeholder="Loan Amount" />
+            </label>
+    
+            <label for="rate" class="rate">
+                <span class="percent">
+                    <i class="fa fa-percent" aria-hidden="true">%</i>
+                </span>
+                <input id="rate" type="number" placeholder="Rate Of Interest" />
+            </label>
+    
+            <label for="time">
+                <span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                </span>
+                <input id="time" type="number" placeholder="Years to Repay" />
+            </label>
+    
+            <button class="button" type="submit"></button>
+        </form>
+    
+        <div class="results hide">
+            <div class="monthly-payment">
+                <span>Monthly Payment</span>
+                <span id="payment"></span>
+            </div>
+            <div class="total-interest">
+                <span>Total Interest</span>
+                <span id="interest"></span>
+            </div>
+            <div class="total-amount">
+                <span>Total Amount</span>
+                <span id="total"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <h3>Create By Developer Prothes</h3>
+
+
+<script src="main.js"></script>
+</body>
+</html>
